@@ -44,12 +44,13 @@ def turn
     index = input_to_index(input)
     if valid_move?(input)
       move(input, current_player)
+      display_board
     else
       turn
     end
     display_board
   end
-
+  
   def turn_count
     count = 0
     @board.each do |move|
