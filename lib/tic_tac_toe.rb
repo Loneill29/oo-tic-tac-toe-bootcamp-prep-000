@@ -25,15 +25,15 @@ class TicTacToe
       def move(index, current_player = "X")
       @board[index] = current_player
     end
-    def position_taken?(location)
-    if  @board[location] != " " && @board[location] != ""
+    def position_taken?(index)
+    if  @board[index] != " " && @board[index] != ""
       return true
     else return false
     end
   end
 
-  def valid_move?(location)
-    if location.between?(0,8) && !position_taken?(location)
+  def valid_move?(index)
+    if index.between?(0,8) && !position_taken?(index)
      true
   else false
   end
