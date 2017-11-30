@@ -111,10 +111,8 @@ until over?
    end
    if won?
      puts "Congratulations #{winner}!"
-   break
    elsif draw?
      puts "Cat's Game!"
-     break
    end
  end
 end
