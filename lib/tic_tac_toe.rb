@@ -26,8 +26,9 @@ class TicTacToe
       @board[index] = current_player
     end
     def position_taken?(board, location)
-    if  @board[location] != " " && @board[location] != "" 
+    if  @board[location] != " " && @board[location] != ""
       return true
+    end
     else return false
     end
 
