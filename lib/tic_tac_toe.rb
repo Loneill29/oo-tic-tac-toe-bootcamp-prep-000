@@ -32,7 +32,7 @@ class TicTacToe
     end
   end
   def valid_move?(position)
-    if position.between?(0,8) && !position_taken?
+    if position.between?(0,8) && !position_taken?(location)
       return true
   end
 else return false
