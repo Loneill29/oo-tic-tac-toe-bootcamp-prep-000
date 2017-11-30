@@ -104,15 +104,13 @@ def turn
      end
    end
 
-   def play
-     until over?
-       turn
-     end
-
-     if won?
-       puts "Congratulations #{winner}!"
-     elsif draw?
-       puts "Cat's Game!"
-     end
+   def play(board)
+until over?(board)
+     turn(board)
    end
-end
+   if won?(board)
+     puts "Congratulations #{winner(board)}!"
+   elsif draw?(board)
+     puts "Cat's Game!"
+   end
+ end
