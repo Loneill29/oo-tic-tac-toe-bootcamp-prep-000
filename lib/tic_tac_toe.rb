@@ -50,7 +50,7 @@ def turn
     end
     display_board
   end
-  
+
   def turn_count
     count = 0
     @board.each do |move|
