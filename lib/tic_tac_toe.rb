@@ -38,28 +38,17 @@ class TicTacToe
   else false
   end
 end
-
-
-  def turn
-      puts "Please enter 1-9:"
-      i = gets.strip
-      index = input_to_index(i)
-        if valid_move?
-        move(index, current_player)
-      else return false
-          display_board
-          i = gets.strip
-          index = input_to_index(i)
-          m = valid_move?(index)
-          move(index, current_player)
-        end
-      end
+def turn
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
+    if valid_move?(input)
+      move(input, current_player)
+    else
+      turn
     end
-
-
-
-
-
+    display_board
+  end
 
   def turn_count
     count = 0
